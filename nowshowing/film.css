@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+header .container {
+    background-color: rgba(250, 240, 230, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar > a img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.nav-bar ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-bar ol li,
+.nav-bar ol span {
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-bar ol li a,
+.nav-bar ol span {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ol li a:hover,
+.nav-bar ol span:hover {
+    color: #ff5733;
+}
+
+.nav-bar ol span ul,
+.nav-bar ol li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ol span ul li,
+.nav-bar ol li ul li {
+    padding: 5px 15px;
+}
+
+.nav-bar ol span ul li a,
+.nav-bar ol li ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-bar ol span:hover ul,
+.nav-bar ol li:hover ul {
+    display: block;
+}
+main {
+    display: flex;
+    flex-direction: column; /* Các phần trong main sẽ xếp dọc */
+    justify-content: flex-start; /* Căn trên cho nội dung */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 40px 20px;
+    gap: 20px; /* Giảm khoảng cách giữa các phần */
+    width: 100%;
+    max-width: 1200px; /* Giới hạn chiều rộng của phần chính */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+/* Top row (Poster và thông tin phim) */
+.movie-detail {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px; /* Giảm khoảng cách dưới của movie-detail */
+    align-items: flex-start; /* Căn phần tử dọc theo đầu của container */
+}
+
+.movie-poster {
+    flex: 1; /* Poster chiếm 1 phần */
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh */
+    margin-right: 5px; /* Giảm khoảng cách phải của poster */
+}
+
+.movie-info {
+    flex: 2; /* Phần thông tin chiếm 2 phần */
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie Poster */
+.movie-poster img {
+    width: 220px; /* Giảm kích thước ảnh */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Movie Info */
+.movie-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Genre, Date, and other details */
+.movie-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 6px 0; /* Giảm khoảng cách giữa các đoạn văn */
+}
+
+/* Bottom row (Trailer và Button) */
+.booking {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie-trailer {
+    margin-top: 10px; /* Giảm khoảng cách trên của trailer */
+}
+
+.movie-trailer iframe {
+    width: 100%; /* Đảm bảo chiều rộng 100% */
+    max-width: 1356px; /* Tăng chiều rộng tối đa */
+    height: 450px; /* Tăng chiều cao */
+    border-radius: 8px;
+}
+
+
+/* Button Styles */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Giảm khoảng cách dưới của nút */
+}
+
+.buttons .btn-booking {
+    background-color: #ff5733;
+    color: white;
+    padding: 20px 50px; /* Tăng kích thước nút (cao và rộng hơn) */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.6rem; /* Tăng kích thước chữ cho nút */
+    transition: background-color 0.3s ease;
+    width: 250px; /* Cố định độ rộng của nút */
+    text-align: center; /* Căn giữa chữ trong nút */
+}
+
+.buttons .btn-booking:hover {
+    background-color: #e74c3c;
+}
+
+
+footer {
+    padding: 40px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-address h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-address p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-address p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-address p a:hover {
+    color: #ff5733;
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 100px;
+    }
+
+    .footer-address h3 {
+        font-size: 16px;
+    }
+
+    .footer-address p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
+    }
+
+    .footer-address h3 {
+        font-size: 14px;
+    }
+
+    .footer-address p {
+        font-size: 10px;
+    }
+}
+a{
+    text-decoration: none;
+    text-align: center;
+}

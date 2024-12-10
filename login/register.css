@@ -1,0 +1,261 @@
+/* Body chỉnh tổng thể */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Để đẩy footer xuống */
+}
+
+/* Header giữ nguyên */
+header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+header .container {
+    background-color: rgba(250, 240, 230, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar > a img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.nav-bar ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-bar ol li,
+.nav-bar ol span {
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-bar ol li a,
+.nav-bar ol span {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ol li a:hover,
+.nav-bar ol span:hover {
+    color: #ff5733;
+}
+
+.nav-bar ol span ul,
+.nav-bar ol li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ol span ul li,
+.nav-bar ol li ul li {
+    padding: 5px 15px;
+}
+
+.nav-bar ol span ul li a,
+.nav-bar ol li ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-bar ol span:hover ul,
+.nav-bar ol li:hover ul {
+    display: block;
+}
+
+
+/* Main ra giữa màn hình */
+main {
+    flex: 1; /* Lấp khoảng trống giữa header và footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out; /* Hiệu ứng fade in */
+}
+
+/* Form container */
+main > #register {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: slideUp 1s ease-in-out; /* Hiệu ứng slide up */
+}
+
+/* Tiêu đề */
+main h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: red;
+}
+
+/* Các ô input */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+button[type="submit"] {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Nút bấm */
+/* Nút bấm */
+button[type="submit"] {
+    background-color: #4CAF50; /* Màu nền mặc định */
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover đổi màu */
+button[type="submit"]:hover {
+    background-color: #ff5733; /* Màu nền khi hover */
+    color: white; /* Đảm bảo chữ vẫn dễ đọc */
+    transform: translateY(-2px); /* Hiệu ứng nổi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng mượt */
+}
+
+/* Active trạng thái bấm */
+button[type="submit"]:active {
+    transform: translateY(0); /* Giảm nổi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Giảm bóng */
+}
+
+
+/* Lỗi */
+div[id$="Error"] {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Footer giữ nguyên */
+footer {
+    padding: 40px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-address h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-address p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-address p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-address p a:hover {
+    color: #ff5733;
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 100px;
+    }
+
+    .footer-address h3 {
+        font-size: 16px;
+    }
+
+    .footer-address p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
+    }
+
+    .footer-address h3 {
+        font-size: 14px;
+    }
+
+    .footer-address p {
+        font-size: 10px;
+    }
+}
+a{
+    text-decoration: none;
+    text-align: center;
+}
