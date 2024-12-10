@@ -1,4 +1,4 @@
-/* Tổng thể */
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,10 +6,10 @@ body {
     color: black;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Để đẩy footer xuống */
+    min-height: 100vh; /* Ensure footer stays at the bottom */
 }
 
-/* Header giữ nguyên */
+/* Header */
 header, main, footer {
     margin: 0;
     padding: 0;
@@ -23,6 +23,7 @@ header .container {
     padding: 10px;
 }
 
+/* Navigation Bar */
 .nav-bar {
     display: flex;
     align-items: center;
@@ -93,6 +94,7 @@ header .container {
     display: block;
 }
 
+/* Main content */
 main {
     flex: 1;
     display: flex;
@@ -117,7 +119,7 @@ main {
     margin-bottom: 20px;
 }
 
-/* Input và Button */
+/* Input and Button */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -162,17 +164,18 @@ footer img {
     margin-top: 10px;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     /* Stack navigation vertically on smaller screens */
     .nav-bar ol {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .nav-bar > a img {
         height: 25px; /* Adjust logo size for smaller screens */
     }
-    
+
     /* Adjust Login Form padding */
     #login {
         padding: 15px;
@@ -189,20 +192,21 @@ footer img {
 }
 
 @media (max-width: 480px) {
+    /* Header Image Adjustment */
     header img {
         max-height: 40px;
     }
 
+    /* Navigation adjustments */
     header nav a {
         font-size: 12px;
     }
 
-    /* Adjust login padding for mobile */
+    /* Adjust login form padding and button size for mobile */
     #login {
         padding: 10px;
     }
 
-    /* Adjust buttons for mobile */
     button[type="submit"] {
         padding: 12px;
     }
