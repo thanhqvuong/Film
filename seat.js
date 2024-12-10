@@ -50,9 +50,12 @@ function updateUI() {
 // Xử lý sự kiện khi nhấn nút "Đặt Vé"
 confirmButton.addEventListener('click', () => {
     if (selectedSeats.length > 0) {
+        console.log('Đặt vé thành công, chuyển hướng...');
         alert(`Bạn đã đặt thành công các ghế: ${selectedSeats.join(', ')}. Tổng tiền: ${(
             selectedSeats.length * SEAT_PRICE
         ).toLocaleString('vi-VN')} VND`);
-        window.location.href = 'homepage.html'; // Chuyển hướng sau khi đặt vé thành công
+        window.location.href = 'homepage.html';  // Chuyển hướng về trang chủ
+    } else {
+        console.log('Không có ghế nào được chọn.');
     }
 });
