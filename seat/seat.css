@@ -90,31 +90,18 @@ header .container {
     display: block;
 }
 
-/* Định dạng chính cho thẻ main */
+/* Main styling */
 main {
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    max-width: 900px; /* Giới hạn chiều rộng tối đa */
-    margin: 20px auto; /* Căn giữa và tạo khoảng cách trên dưới */
-    padding: 20px; /* Thêm khoảng cách bên trong */
-    background-color: #fff; /* Màu nền trắng */
-    border-radius: 10px; /* Bo góc mềm mại */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    width: 100%; 
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-/* Các phần tử bên trong main */
-main {
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    max-width: 900px; /* Giới hạn chiều rộng tối đa */
-    margin: 20px auto; /* Căn giữa và tạo khoảng cách trên dưới */
-    padding: 20px; /* Thêm khoảng cách bên trong */
-    background-color: #fff; /* Màu nền trắng */
-    border-radius: 10px; /* Bo góc mềm mại */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
-}
-
-/* Các phần tử bên trong main */
 main h1 {
     font-size: 24px;
     color: #333;
@@ -129,38 +116,34 @@ main p {
     text-align: center;
 }
 
+/* Seat grid layout */
 .seats-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Khoảng cách giữa các hàng ghế */
+    gap: 15px;
     margin: 20px 0;
 }
 
-/* Hàng ghế */
 .row {
-    display: flex; /* Flexbox cho hàng */
-    align-items: center; /* Căn giữa chữ theo chiều dọc */
-    gap: 10px; /* Khoảng cách giữa chữ hàng và ghế */
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Chữ hàng (Hàng A, Hàng B,...) */
 .row span {
     font-weight: bold;
-    text-align: center; /* Căn giữa theo chiều ngang */
-    width: 50px; /* Chiều rộng cố định để chữ không quá lớn */
-    line-height: 40px; /* Căn giữa chữ theo chiều dọc */
+    text-align: center;
+    width: 50px;
+    line-height: 40px;
 }
 
-/* Hiển thị các ghế */
 .seats {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10 ghế trong mỗi hàng */
-    gap: 10px; /* Khoảng cách giữa các ghế */
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
     justify-content: center;
-    flex: 1; /* Để ghế chiếm không gian còn lại */
 }
 
-/* Ghế */
 .seat {
     width: 40px;
     height: 40px;
@@ -170,23 +153,19 @@ main p {
     transition: background-color 0.3s ease;
 }
 
-/* Ghế đã chọn */
 .seat.selected {
     background-color: #4CAF50;
 }
 
-/* Ghế không khả dụng */
 .seat.unavailable {
     background-color: #999;
     cursor: not-allowed;
 }
 
-/* Hover ghế khả dụng */
 .seat.available:hover {
     background-color: #7bba2f;
 }
 
-/* Màn hình chiếu */
 .screen {
     width: 100%;
     height: 50px;
@@ -200,7 +179,6 @@ main p {
     border-radius: 5px;
 }
 
-/* Ghế đã chọn */
 .selected-seats {
     margin-top: 20px;
 }
@@ -218,7 +196,6 @@ main p {
     color: #555;
 }
 
-/* Tổng tiền */
 .total {
     font-size: 18px;
     color: #333;
@@ -226,8 +203,6 @@ main p {
     text-align: center;
 }
 
-/* Nút xác nhận */
-/* Căn giữa nút đặt vé */
 button#confirm-selection {
     background-color: #4CAF50;
     color: white;
@@ -235,9 +210,9 @@ button#confirm-selection {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto; /* Căn giữa nút theo chiều ngang */
+    margin: 20px auto;
     font-size: 16px;
-    display: block; /* Chuyển nút thành khối để margin auto hoạt động */
+    display: block;
     transition: background-color 0.3s ease;
 }
 
@@ -250,13 +225,7 @@ button#confirm-selection:hover:not(:disabled) {
     background-color: #45a049;
 }
 
-/* Đảm bảo vùng nút được căn giữa */
-.total {
-    text-align: center; /* Đảm bảo phần tổng tiền và nút được căn giữa */
-    margin-top: 20px;
-}
-
-
+/* Footer */
 footer {
     padding: 40px 20px;
     background-color: #2c3e50;
@@ -298,14 +267,19 @@ footer {
     color: #ff5733;
 }
 
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
     main {
         max-width: 90%;
         padding: 15px;
     }
 
-    form {
-        padding: 20px;
+    .seats {
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .footer-logo img {
@@ -322,6 +296,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .nav-bar {
+        align-items: flex-start;
+    }
+
+    .seats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     main {
         padding: 10px;
     }
@@ -337,8 +319,4 @@ footer {
     .footer-address p {
         font-size: 10px;
     }
-}
-a{
-    text-decoration: none;
-    text-align: center;
 }

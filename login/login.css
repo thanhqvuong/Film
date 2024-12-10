@@ -164,8 +164,27 @@ footer img {
 
 /* Responsive */
 @media (max-width: 768px) {
+    /* Stack navigation vertically on smaller screens */
+    .nav-bar ol {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-bar > a img {
+        height: 25px; /* Adjust logo size for smaller screens */
+    }
+    
+    /* Adjust Login Form padding */
     #login {
         padding: 15px;
+    }
+
+    /* Adjust input and button sizes for smaller screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    button[type="submit"] {
+        font-size: 16px;
     }
 }
 
@@ -178,7 +197,21 @@ footer img {
         font-size: 12px;
     }
 
+    /* Adjust login padding for mobile */
     #login {
         padding: 10px;
+    }
+
+    /* Adjust buttons for mobile */
+    button[type="submit"] {
+        padding: 12px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer img {
+        max-width: 100px; /* Adjust footer logo size on small screens */
     }
 }

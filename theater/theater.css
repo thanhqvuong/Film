@@ -1,3 +1,4 @@
+/* Thiết lập lại các phần margin và padding */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,6 +21,7 @@ header .container {
     padding: 10px;
 }
 
+/* Thanh điều hướng */
 .nav-bar {
     display: flex;
     align-items: center;
@@ -89,16 +91,17 @@ header .container {
 .nav-bar ol li:hover ul {
     display: block;
 }
-/* Cấu trúc phần Main */
+
 /* Cấu trúc phần Main */
 main {
     padding: 40px 0;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Đảm bảo phần main không quá rộng trên thiết bị nhỏ */
+    margin: 0 auto;
 }
 
-/* Tiêu đề phần chính */
 h1 {
     text-align: center;
     font-size: 24px;
@@ -109,7 +112,7 @@ h1 {
 .theaters {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 cột */
-    gap: 20px; /* Khoảng cách giữa các item */
+    gap: 20px;
     margin-bottom: 40px;
 }
 
@@ -162,13 +165,12 @@ h1 {
     border: 1px solid #ccc;
 }
 
-/* Tiêu đề của phần giờ chiếu */
 h2 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-/* Đảm bảo responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .theaters {
         grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ */
@@ -181,11 +183,29 @@ h2 {
     #showtime {
         width: 80%;
     }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-bar ol {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
     .theaters {
         grid-template-columns: 1fr; /* 1 cột trên màn hình rất nhỏ */
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
 
@@ -230,16 +250,8 @@ footer {
     color: #ff5733;
 }
 
+/* Responsive footer */
 @media (max-width: 768px) {
-    main {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    form {
-        padding: 20px;
-    }
-
     .footer-logo img {
         max-width: 100px;
     }
@@ -254,10 +266,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    main {
-        padding: 10px;
-    }
-
     .footer-logo img {
         max-width: 80px;
     }
@@ -270,7 +278,8 @@ footer {
         font-size: 10px;
     }
 }
-a{
+
+a {
     text-decoration: none;
     text-align: center;
 }

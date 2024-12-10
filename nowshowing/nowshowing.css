@@ -287,3 +287,52 @@ a{
     text-decoration: none;
     text-align: center;
 }
+/* Responsive navigation bar */
+@media (max-width: 768px) {
+    .nav-bar ol {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+    .nav-bar > a img {
+        height: 25px; /* Adjust logo size for smaller screens */
+    }
+}
+
+/* Responsive Film Container - Add more spacing for smaller screens */
+@media (max-width: 768px) {
+    .film-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        gap: 15px; /* Reduce gap between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .film-container {
+        grid-template-columns: 1fr; /* Single column for phones */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+    .film-item h3 {
+        font-size: 16px; /* Make text size smaller on mobile */
+    }
+}
+
+/* Buttons and Footer */
+@media (max-width: 480px) {
+    .buttons .btn-booking {
+        width: 100%; /* Full width buttons on mobile */
+        padding: 15px 0; /* Adjust button padding */
+        font-size: 1.4rem; /* Adjust button text size */
+    }
+    footer {
+        padding: 30px 15px; /* Adjust footer padding */
+    }
+    .footer-logo img {
+        max-width: 80px; /* Adjust logo size on mobile */
+    }
+    .footer-address h3 {
+        font-size: 14px; /* Smaller header text */
+    }
+    .footer-address p {
+        font-size: 12px; /* Smaller footer text */
+    }
+}
