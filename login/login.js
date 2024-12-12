@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Kiểm tra nếu tìm thấy người dùng
         if (findUser) {
             console.log("User found: ", findUser); // Kiểm tra thông tin người dùng
-            window.location.href = "/seat/seat.html"; // Chuyển hướng đến trang chọn ghế
+            window.location.href = "/Film/seat/seat.html"; // Chuyển hướng đến trang chọn ghế
         } else {
             console.log("User not found."); // Nếu không tìm thấy người dùng
             if (EmailError) EmailError.style.display = "block";

@@ -80,7 +80,7 @@ Register.addEventListener("submit", function(e) {
 
         // Redirect after a short delay
         setTimeout(function() {
-            window.location.href = "/login/login.html"; // Redirect to login page
+            window.location.href = "/Film/login/login.html"; // Redirect to login page
         }, 1000);
     }
 });

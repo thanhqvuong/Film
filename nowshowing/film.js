@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Thêm sự kiện khi nhấn vào nút
         bookingButton.addEventListener("click", function () {
             // Chuyển hướng đến trang chọn rạp
-            window.location.href = "/theater/theater.html";  // Thay đổi URL này nếu cần
+            window.location.href = "/Film/theater/theater.html";  // Thay đổi URL này nếu cần
         });
     } else {
         console.error("Không tìm thấy nút đặt vé.");

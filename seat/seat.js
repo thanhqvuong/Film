@@ -53,6 +53,6 @@ confirmButton.addEventListener('click', () => {
         alert(`Bạn đã đặt thành công các ghế: ${selectedSeats.join(', ')}. Tổng tiền: ${(
             selectedSeats.length * SEAT_PRICE
         ).toLocaleString('vi-VN')} VND`);
-        window.location.href = '/homepage.html'; // Chuyển hướng sau khi đặt vé thành công
+        window.location.href = '/Film/homepage.html'; // Chuyển hướng sau khi đặt vé thành công
     }
 });

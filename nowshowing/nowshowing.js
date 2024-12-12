@@ -1,12 +1,12 @@
 const filmLinks = {
-    "Moana 2": "/nowshowing/film1.html",
-    "Linh Mieu": "/nowshowing/film2.html",
-    "Operation Undead": "/nowshowing/film3.html",
-    "Amazon Bullseye": "/nowshowing/film4.html",
-    "Blue Period": "/nowshowing/film5.html",
-    "Wicked": "/nowshowing/film6.html",
-    "Gladiator II": "/nowshowing/film7.html",
-    "Quy Treo Dau": "/nowshowing/film8.html"
+    "Moana 2": "/Film/nowshowing/film1.html",
+    "Linh Mieu": "/Film/nowshowing/film2.html",
+    "Operation Undead": "/Film/nowshowing/film3.html",
+    "Amazon Bullseye": "/Film/nowshowing/film4.html",
+    "Blue Period": "/Film/nowshowing/film5.html",
+    "Wicked": "/Film/nowshowing/film6.html",
+    "Gladiator II": "/Film/nowshowing/film7.html",
+    "Quy Treo Dau": "/Film/nowshowing/film8.html"
 };
 const filmImages = document.querySelectorAll("#now-showing .film-item img");
 

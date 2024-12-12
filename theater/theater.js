@@ -50,6 +50,6 @@ let selectedTheater = null;
 
             // Kiểm tra xem người dùng đã chọn giờ chiếu chưa
             if (selectedTime) {
-                window.location.href = "/login/login.html";  // Thay đổi đường dẫn nếu cần
+                window.location.href = "/Film/login/login.html";  // Thay đổi đường dẫn nếu cần
             }
         }
