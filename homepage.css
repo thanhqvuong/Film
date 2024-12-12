@@ -303,3 +303,6 @@ footer {
         animation: none;
     }
 }
+a{
+    text-decoration: none;
+}
