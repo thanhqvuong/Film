@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Rạp và Lịch Chiếu</title>
+    <link rel="stylesheet" href="./theater.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <a href="/homepage.html">
+                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" alt="CGV Logo">
+                </a>
+                <ol>
+                    <li class="film">Film
+                        <ul>
+                            <li><a href="/nowshowing/nowshowing.html">Film đang chiếu</a></li>
+                            <li><a href="/commingsoon/commingsoon.html">Film sắp chiếu</a></li>
+                        </ul>
+                    </li>
+                    <li class="theater">
+                        <a href="/theater/theater.html">Rạp Chiếu Film</a>
+                    </li>
+                    <li class="member">Thành Viên
+                        <ul>
+                            <li><a href="/login/login.html">Tài Khoản CGV</a></li>
+                           <li><a href="/login/register.html">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Chọn Rạp và Lịch Chiếu</h1>
+        
+        <div class="theaters">
+            <div class="theater-item">
+                <h2>Rạp CGV Sư Vạn Hạnh</h2>
+                <p>Địa chỉ: Tầng 6, Vạn Hạnh Mall , 11 Sư Vạn Hạnh , Phường 12 , Quận 10</p>
+                <button onclick="selectTheater('CGV Vạn Hạnh Mall')">Chọn Rạp</button>
+            </div>
+            <div class="theater-item">
+                <h2>Rạp CGV Hùng Vương Plaza</h2>
+                <p>Địa chỉ: Tầng 7 , Hùng Vương Plaza , 126 Hồng Bàng , Phường 12 , Quận 5</p>
+                <button onclick="selectTheater('CGV Hùng Vương Plaza')">Chọn Rạp</button>
+            </div>
+            <div class="theater-item">
+                <h2>Rạp CGV Vincom Đồng Khởi</h2>
+                <p>Địa chỉ: Tầng 3 , Vincom Đồng Khởi , 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1</p>
+                <button onclick="selectTheater('CGV Vincom Đồng Khởi')">Chọn Rạp</button>
+            </div>
+            <div class="theater-item">
+                <h2>Rạp CGV Lý Chính Thắng</h2>
+                <p>Địa chỉ: Tầng 3 , 83 Lý Chính Thắng , Phường 8 , Quận 3</p>
+                <button onclick="selectTheater('CGV Lý Chính Thắng')">Chọn Rạp</button>
+            </div>
+            <div class="theater-item">
+                <h2>Rạp CGV Crescent Mall</h2>
+                <p>Địa chỉ: Lầu 5, Crescent Mall Đại lộ Nguyễn Văn Linh, Phường Phú Mỹ Hưng , Quận 7</p>
+                <button onclick="selectTheater('CGV Crescent Mall')">Chọn Rạp</button>
+            </div>
+            <div class="theater-item">
+                <h2>Rạp CGV Liberty Citypoint</h2>
+                <p>Địa chỉ: Tầng M - 1, khách sạn Liberty Center Saigon Citypoint, 59 - 61 Pasteur, Quận 1</p>
+                <button onclick="selectTheater('CGV Liberty Citypoint')">Chọn Rạp</button>
+            </div>
+        </div>
+
+        <!-- Phần chọn giờ chiếu -->
+        <h2>Chọn Giờ Chiếu</h2>
+        <form id="showtime-form">
+            <div id="showtimes-section" style="display: none;">
+                <label for="showtime">Chọn Giờ Chiếu:</label>
+                <select id="showtime" name="showtime" required onchange="redirectToLogin()">
+                    <!-- Các giờ chiếu sẽ được thêm vào đây khi người dùng chọn rạp -->
+                </select>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="https://banner2.cleanpng.com/20181203/orv/kisspng-cj-cgv-vietnam-cj-group-film-1713914319903.webp" alt="Footer Logo">
+        </div>
+        <div class="footer-address">
+            <h3>CÔNG TY TNHH CJ CGV VIỆT NAM</h3>
+            <p>Giấy Chứng nhận đăng ký doanh nghiệp: 0303675393 đăng ký lần đầu ngày 31/7/2008, được cấp bởi Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh</p>
+            <p>Địa chỉ: Lầu 2, số 7/28, Đường Thành Thái, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam</p>
+            <p>Đường dây nóng (Hotline): 1900 6017</p>
+            <p>COPYRIGHT 2017 CJ CGV VIETNAM CO., LTD. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <script src="./theater.js">
+        
+    </script>
+</body>
+</html>

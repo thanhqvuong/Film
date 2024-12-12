@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký</title>
+    <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <a href="/homepage.html">
+                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" alt="CGV Logo">
+                </a>
+                <ol>
+                    <li class="film">Film
+                        <ul>
+                            <li><a href="/nowshowing/nowshowing.html">Film đang chiếu</a></li>
+                            <li><a href="/commingsoon/commingsoon.html">Film sắp chiếu</a></li>
+                        </ul>
+                    </li>
+                    <li class="theater">
+                        <a href="/theater/theater.html">Rạp Chiếu Film</a>
+                    </li>
+                    <li class="member">Thành Viên
+                        <ul>
+                            <li><a href="/login/login.html">Đăng Nhập</a></li>
+                            <li><a href="/login/register.html">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="register">
+            <h1>Đăng Ký</h1> <!-- Typo in ID -->
+            <div>
+                <label for="userName">Tên người dùng:</label><br>
+                <input type="text" id="userName">
+            </div>
+            <div id="userNameError" style="display: none; color: red;">Tên người dùng không được để trống.</div>
+            
+            <div>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email">
+            </div>
+            <div id="emailError" style="display: none; color: red;">Email không hợp lệ.</div>
+            
+            <div>
+                <label for="password">Mật khẩu:</label><br>
+                <input type="password" id="password">
+            </div>
+            <div id="passwordError" style="display: none; color: red;">Mật khẩu không được để trống.</div>
+            
+            <div>
+                <label for="confirmPassword">Xác nhận mật khẩu:</label><br>
+                <input type="password" id="confirmPassword">
+            </div>
+            <div id="confirmPasswordError" style="display: none; color: red;">Mật khẩu xác nhận không khớp.</div>
+            
+            <div>
+                <label for="dateofBirth">Ngày sinh:</label><br>
+                <input type="date" id="dateofBirth">
+            </div>
+            <div id="dateofBirthError" style="display: none; color: red;">Ngày sinh không được để trống.</div>
+        
+            <button type="submit">Đăng Ký</button> <!-- Submit button -->
+        </form>
+</main>
+<footer>
+    <div class="footer-logo">
+        <img src="https://banner2.cleanpng.com/20181203/orv/kisspng-cj-cgv-vietnam-cinema-cj-group-film-1713914319903.webp" alt="Footer Logo">
+    </div>
+    <div class="footer-address">
+        <h3>CÔNG TY TNHH CJ CGV VIỆT NAM</h3>
+        <p>Giấy Chứng nhận đăng ký doanh nghiệp: 0303675393 đăng ký lần đầu ngày 31/7/2008, được cấp bởi Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh</p>
+        <p>Địa chỉ: Lầu 2, số 7/28, Đường Thành Thái, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam</p>
+        <p>Đường dây nóng (Hotline): 1900 6017</p>
+        <p>COPYRIGHT 2017 CJ CGV VIETNAM CO., LTD. ALL RIGHTS RESERVED</p>
+    </div>
+</footer>
+<script src="./register.js">
+</script>
+</body>
+</html>

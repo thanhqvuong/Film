@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+header, main, footer {
+    margin: 0;
+    padding: 0;
+}
+
+header .container {
+    background-color: rgba(250, 240, 230, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar > a img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.nav-bar ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-bar ol li,
+.nav-bar ol span {
+    position: relative;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-bar ol li a,
+.nav-bar ol span {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ol li a:hover,
+.nav-bar ol span:hover {
+    color: #ff5733;
+}
+
+.nav-bar ol span ul,
+.nav-bar ol li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ol span ul li,
+.nav-bar ol li ul li {
+    padding: 5px 15px;
+}
+
+.nav-bar ol span ul li a,
+.nav-bar ol li ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-bar ol span:hover ul,
+.nav-bar ol li:hover ul {
+    display: block;
+}
+
+/* Định dạng chính cho thẻ main */
+main {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+    padding: 20px; /* Thêm khoảng cách bên trong */
+    background-color: #fff; /* Màu nền trắng */
+    border-radius: 10px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Các phần tử bên trong main */
+main {
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    max-width: 900px; /* Giới hạn chiều rộng tối đa */
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+    padding: 20px; /* Thêm khoảng cách bên trong */
+    background-color: #fff; /* Màu nền trắng */
+    border-radius: 10px; /* Bo góc mềm mại */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Các phần tử bên trong main */
+main h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.seats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các hàng ghế */
+    margin: 20px 0;
+}
+
+/* Hàng ghế */
+.row {
+    display: flex; /* Flexbox cho hàng */
+    align-items: center; /* Căn giữa chữ theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa chữ hàng và ghế */
+}
+
+/* Chữ hàng (Hàng A, Hàng B,...) */
+.row span {
+    font-weight: bold;
+    text-align: center; /* Căn giữa theo chiều ngang */
+    width: 50px; /* Chiều rộng cố định để chữ không quá lớn */
+    line-height: 40px; /* Căn giữa chữ theo chiều dọc */
+}
+
+/* Hiển thị các ghế */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 ghế trong mỗi hàng */
+    gap: 10px; /* Khoảng cách giữa các ghế */
+    justify-content: center;
+    flex: 1; /* Để ghế chiếm không gian còn lại */
+}
+
+/* Ghế */
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Ghế đã chọn */
+.seat.selected {
+    background-color: #4CAF50;
+}
+
+/* Ghế không khả dụng */
+.seat.unavailable {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* Hover ghế khả dụng */
+.seat.available:hover {
+    background-color: #7bba2f;
+}
+
+/* Màn hình chiếu */
+.screen {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Ghế đã chọn */
+.selected-seats {
+    margin-top: 20px;
+}
+
+#selected-seats-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#selected-seats-list li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Tổng tiền */
+.total {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Nút xác nhận */
+/* Căn giữa nút đặt vé */
+button#confirm-selection {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto; /* Căn giữa nút theo chiều ngang */
+    font-size: 16px;
+    display: block; /* Chuyển nút thành khối để margin auto hoạt động */
+    transition: background-color 0.3s ease;
+}
+
+button#confirm-selection:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+button#confirm-selection:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+/* Đảm bảo vùng nút được căn giữa */
+.total {
+    text-align: center; /* Đảm bảo phần tổng tiền và nút được căn giữa */
+    margin-top: 20px;
+}
+
+
+footer {
+    padding: 40px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-address h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-address p {
+    font-size: 14px;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.footer-address p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-address p a:hover {
+    color: #ff5733;
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 100px;
+    }
+
+    .footer-address h3 {
+        font-size: 16px;
+    }
+
+    .footer-address p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    .footer-logo img {
+        max-width: 80px;
+    }
+
+    .footer-address h3 {
+        font-size: 14px;
+    }
+
+    .footer-address p {
+        font-size: 10px;
+    }
+}
+a{
+    text-decoration: none;
+    text-align: center;
+}

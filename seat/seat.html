@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Ghế</title>
+    <link rel="stylesheet" href="./seat.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav-bar">
+                <a href="/homepage.html">
+                    <img src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png" alt="CGV Logo">
+                </a>
+                <ol>
+                    <li class="film">Film
+                        <ul>
+                            <li><a href="/nowshowing/nowshowing.html">Film đang chiếu</a></li>
+                            <li><a href="/commingsoon/commingsoon.html">Film sắp chiếu</a></li>
+                        </ul>
+                    </li>
+                    <li class="theater">
+                        <a href="/theater/theater.html">Rạp Chiếu Film</a>
+                    </li>
+                    <li class="member">Thành Viên
+                        <ul>
+                            <li><a href="/login/login.html">Đăng Nhập</a></li>
+                            <li><a href="/login/register.html">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Chọn Ghế Của Bạn</h1>
+            
+            <p>Vui lòng chọn ghế của bạn. Ghế đã đặt không thể chọn.</p>
+    
+            <!-- Màn hình chiếu -->
+            <div class="screen">
+                <h2>Màn Hình Chiếu</h2>
+            </div>
+    
+            <!-- Hiển thị các hàng ghế -->
+            <div class="seats-container">
+                <!-- Hàng A (bị cấm ngồi) -->
+                <div class="row" id="row-A">
+                    <span>Hàng A:</span>
+                    <div class="seats">
+                        <div class="seat unavailable" data-seat="A1"></div>
+                        <div class="seat unavailable" data-seat="A2"></div>
+                        <div class="seat unavailable" data-seat="A3"></div>
+                        <div class="seat unavailable" data-seat="A4"></div>
+                        <div class="seat unavailable" data-seat="A5"></div>
+                        <div class="seat unavailable" data-seat="A6"></div>
+                        <div class="seat unavailable" data-seat="A7"></div>
+                        <div class="seat unavailable" data-seat="A8"></div>
+                        <div class="seat unavailable" data-seat="A9"></div>
+                        <div class="seat unavailable" data-seat="A10"></div>
+                    </div>
+                </div>
+    
+                <!-- Hàng B -->
+                <div class="row" id="row-B">
+                    <span>Hàng B:</span>
+                    <div class="seats">
+                        <div class="seat available" data-seat="B1"></div>
+                        <div class="seat available" data-seat="B2"></div>
+                        <div class="seat available" data-seat="B3"></div>
+                        <div class="seat available" data-seat="B4"></div>
+                        <div class="seat available" data-seat="B5"></div>
+                        <div class="seat available" data-seat="B6"></div>
+                        <div class="seat available" data-seat="B7"></div>
+                        <div class="seat available" data-seat="B8"></div>
+                        <div class="seat available" data-seat="B9"></div>
+                        <div class="seat available" data-seat="B10"></div>
+                    </div>
+                </div>
+    
+                <!-- Hàng C -->
+                <div class="row" id="row-C">
+                    <span>Hàng C:</span>
+                    <div class="seats">
+                        <div class="seat available" data-seat="C1"></div>
+                        <div class="seat available" data-seat="C2"></div>
+                        <div class="seat available" data-seat="C3"></div>
+                        <div class="seat available" data-seat="C4"></div>
+                        <div class="seat available" data-seat="C5"></div>
+                        <div class="seat available" data-seat="C6"></div>
+                        <div class="seat available" data-seat="C7"></div>
+                        <div class="seat available" data-seat="C8"></div>
+                        <div class="seat available" data-seat="C9"></div>
+                        <div class="seat available" data-seat="C10"></div>
+                    </div>
+                </div>
+                <div class="row" id="row-D">
+                    <span>Hàng D:</span>
+                    <div class="seats">
+                        <div class="seat available" data-seat="D1"></div>
+                        <div class="seat available" data-seat="D2"></div>
+                        <div class="seat available" data-seat="D3"></div>
+                        <div class="seat available" data-seat="D4"></div>
+                        <div class="seat available" data-seat="D5"></div>
+                        <div class="seat available" data-seat="D6"></div>
+                        <div class="seat available" data-seat="D7"></div>
+                        <div class="seat available" data-seat="D8"></div>
+                        <div class="seat available" data-seat="D9"></div>
+                        <div class="seat available" data-seat="D10"></div>
+                    </div>
+                </div>
+                <div class="row" id="row-E">
+                    <span>Hàng E:</span>
+                    <div class="seats">
+                        <div class="seat available" data-seat="E1"></div>
+                        <div class="seat available" data-seat="E2"></div>
+                        <div class="seat available" data-seat="E3"></div>
+                        <div class="seat available" data-seat="E4"></div>
+                        <div class="seat available" data-seat="E5"></div>
+                        <div class="seat available" data-seat="E6"></div>
+                        <div class="seat available" data-seat="E7"></div>
+                        <div class="seat available" data-seat="E8"></div>
+                        <div class="seat available" data-seat="E9"></div>
+                        <div class="seat available" data-seat="E10"></div>
+                    </div>
+                </div>
+                <div class="row" id="row-F">
+                    <span>Hàng F:</span>
+                    <div class="seats">
+                        <div class="seat available" data-seat="F1"></div>
+                        <div class="seat available" data-seat="F2"></div>
+                        <div class="seat available" data-seat="F3"></div>
+                        <div class="seat available" data-seat="F4"></div>
+                        <div class="seat available" data-seat="F5"></div>
+                        <div class="seat available" data-seat="F6"></div>
+                        <div class="seat available" data-seat="F7"></div>
+                        <div class="seat available" data-seat="F8"></div>
+                        <div class="seat available" data-seat="F9"></div>
+                        <div class="seat available" data-seat="F10"></div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="selected-seats">
+                <h3>Ghế Đã Chọn:</h3>
+                <ul id="selected-seats-list">
+                    <!-- Ghế đã chọn sẽ hiển thị ở đây -->
+                </ul>
+            </div>
+    
+            <div class="total">
+                <h3>Tổng Tiền: <span id="total-price">0 VND</span></h3>
+            </div>
+    
+            <button id="confirm-selection" disabled>Đặt Vé</button>
+        </div>
+    
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <img src="https://banner2.cleanpng.com/20181203/orv/kisspng-cj-cgv-vietnam-cinema-cj-group-film-1713914319903.webp" alt="Footer Logo">
+        </div>
+        <div class="footer-address">
+            <h3>CÔNG TY TNHH CJ CGV VIỆT NAM</h3>
+            <p>Giấy Chứng nhận đăng ký doanh nghiệp: 0303675393 đăng ký lần đầu ngày 31/7/2008, được cấp bởi Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh</p>
+            <p>Địa chỉ: Lầu 2, số 7/28, Đường Thành Thái, Phường 14, Quận 10, Thành phố Hồ Chí Minh, Việt Nam</p>
+            <p>Đường dây nóng (Hotline): 1900 6017</p>
+            <p>COPYRIGHT 2017 CJ CGV VIETNAM CO., LTD. ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+    <script src="./seat.js"></script>
+</body>
+</html>
