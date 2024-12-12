@@ -1,20 +1,20 @@
 const filmLinks = {
-    "Moana 2": "/nowshowing/film1.html",
-    "Linh Mieu": "/nowshowing/film2.html",
-    "Operation Undead": "/nowshowing/film3.html",
-    "Amazon Bullseye": "/nowshowing/film4.html",
-    "Blue Period": "/nowshowing/film5.html",
-    "Wicked": "/nowshowing/film6.html",
-    "Gladiator II": "/nowshowing/film7.html",
-    "Quy Treo Dau": "/nowshowing/film8.html",
-    "Cong Tu Bac Lieu": "/comingsoon/film1.html",
-    "TRAPEZIUM": "/comingsoon/film2.html",
-    "Ghost Cat Anzu": "/comingsoon/film3.html",
-    "The Lord of the Rings": "/comingsoon/film4.html",
-    "Sengkolo": "/comingsoon/film5.html",
-    "Binding Souls": "/comingsoon/film6.html",
-    "RM: RIGHT PEOPLE, WRONG PLACE": "/comingsoon/film7.html",
-    "KRAVEN THE HUNTER": "/comingsoon/film8.html"
+    "Moana 2": "/Film/nowshowing/film1.html",
+    "Linh Mieu": "/Film/nowshowing/film2.html",
+    "Operation Undead": "/Film/nowshowing/film3.html",
+    "Amazon Bullseye": "/Film/nowshowing/film4.html",
+    "Blue Period": "/Film/nowshowing/film5.html",
+    "Wicked": "/Film/nowshowing/film6.html",
+    "Gladiator II": "/Film/nowshowing/film7.html",
+    "Quy Treo Dau": "/Film/nowshowing/film8.html",
+    "Cong Tu Bac Lieu": "/Film/comingsoon/film1.html",
+    "TRAPEZIUM": "/Film/comingsoon/film2.html",
+    "Ghost Cat Anzu": "/Film/comingsoon/film3.html",
+    "The Lord of the Rings": "/Film/comingsoon/film4.html",
+    "Sengkolo": "/Film/comingsoon/film5.html",
+    "Binding Souls": "/Film/comingsoon/film6.html",
+    "RM: RIGHT PEOPLE, WRONG PLACE": "/Film/comingsoon/film7.html",
+    "KRAVEN THE HUNTER": "/Film/comingsoon/film8.html"
 };
 
 // Lấy tất cả các ảnh phim
