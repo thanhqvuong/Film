@@ -1,15 +1,15 @@
 const filmLinks = {
-    "Cong Tu Bac Lieu": "/comingsoon/film1.html",
-    "TRAPEZIUM": "/comingsoon/film2.html",
-    "Ghost Cat Anzu": "/comingsoon/film3.html",
-    "The Lord of the Rings": "/comingsoon/film4.html",
-    "Sengkolo": "/comingsoon/film5.html",
-    "Binding Souls": "/comingsoon/film6.html",
-    "RM: RIGHT PEOPLE, WRONG PLACE": "/comingsoon/film7.html",
-    "KRAVEN THE HUNTER": "/comingsoon/film8.html"
+    "Cong Tu Bac Lieu": "/Film/comingsoon/film1.html",
+    "TRAPEZIUM": "/Film/comingsoon/film2.html",
+    "Ghost Cat Anzu": "/Film/comingsoon/film3.html",
+    "The Lord of the Rings": "/Film/comingsoon/film4.html",
+    "Sengkolo": "/Film/comingsoon/film5.html",
+    "Binding Souls": "/Film/comingsoon/film6.html",
+    "RM: RIGHT PEOPLE, WRONG PLACE": "/Film/comingsoon/film7.html",
+    "KRAVEN THE HUNTER": "/Film/comingsoon/film8.html"
 };
 // Lấy tất cả các ảnh phim
-const filmImages = document.querySelectorAll("#now-showing .film-item img, #coming-soon .film-item img");
+const filmImages = document.querySelectorAll("#coming-soon .film-item img");
 
 // Kiểm tra nếu không tìm thấy ảnh phim
 if (filmImages.length === 0) {
