@@ -298,32 +298,90 @@ footer {
     color: #ff5733;
 }
 
-@media (max-width: 768px) {
+/* Tablet view adjustments */
+@media (max-width: 1024px) {
     main {
-        max-width: 90%;
         padding: 15px;
+        max-width: 800px;
     }
 
-    form {
-        padding: 20px;
+    .seats {
+        grid-template-columns: repeat(8, 1fr); /* Reduce seats per row for better fit */
     }
 
-    .footer-logo img {
-        max-width: 100px;
+    .seat {
+        width: 35px;
+        height: 35px;
     }
 
-    .footer-address h3 {
-        font-size: 16px;
+    .screen {
+        height: 40px;
+        font-size: 14px;
     }
 
-    .footer-address p {
-        font-size: 12px;
+    button#confirm-selection {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
-@media (max-width: 480px) {
+/* Mobile view adjustments */
+@media (max-width: 768px) {
     main {
         padding: 10px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .seats {
+        grid-template-columns: repeat(6, 1fr); /* Fewer seats per row */
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+    }
+
+    .screen {
+        font-size: 12px;
+    }
+
+    button#confirm-selection {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    main {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .seat {
+        width: 25px;
+        height: 25px;
+    }
+
+    .screen {
+        height: 30px;
+        font-size: 10px;
+    }
+
+    button#confirm-selection {
+        font-size: 12px;
+        padding: 8px;
     }
 
     .footer-logo img {
@@ -335,10 +393,27 @@ footer {
     }
 
     .footer-address p {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
-a{
-    text-decoration: none;
-    text-align: center;
+
+/* Ultra-small adjustments (narrow devices) */
+@media (max-width: 360px) {
+    main {
+        max-width: 95%;
+    }
+
+    .seats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .seat {
+        width: 20px;
+        height: 20px;
+    }
+
+    button#confirm-selection {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
 }

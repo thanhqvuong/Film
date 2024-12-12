@@ -230,14 +230,95 @@ footer {
     color: #ff5733;
 }
 
-@media (max-width: 768px) {
+/* General responsive adjustments */
+@media (max-width: 1024px) {
     main {
-        max-width: 90%;
+        padding: 20px;
+    }
+
+    .theaters {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on tablets */
+        gap: 15px;
+    }
+
+    .theater-item h2 {
+        font-size: 16px;
+    }
+
+    .theater-item button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    #showtime {
+        width: 70%; /* Reduce input field width */
+    }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    .theaters {
+        grid-template-columns: 1fr; /* 1 column on smaller screens */
+        gap: 10px;
+    }
+
+    .theater-item {
         padding: 15px;
     }
 
-    form {
-        padding: 20px;
+    .theater-item h2 {
+        font-size: 14px;
+    }
+
+    .theater-item button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #showtime {
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+/* Ultra-small devices adjustments */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 16px;
+    }
+
+    .theater-item {
+        padding: 10px;
+    }
+
+    .theater-item h2 {
+        font-size: 12px;
+    }
+
+    .theater-item button {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    #showtime {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 20px 10px;
     }
 
     .footer-logo img {
@@ -251,26 +332,4 @@ footer {
     .footer-address p {
         font-size: 12px;
     }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 10px;
-    }
-
-    .footer-logo img {
-        max-width: 80px;
-    }
-
-    .footer-address h3 {
-        font-size: 14px;
-    }
-
-    .footer-address p {
-        font-size: 10px;
-    }
-}
-a{
-    text-decoration: none;
-    text-align: center;
 }

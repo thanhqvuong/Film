@@ -96,7 +96,7 @@ main {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: clamp(22px, 5vw, 28px);
     color: #333;
     text-align: center;
     margin-bottom: 30px;
@@ -150,7 +150,7 @@ h2 {
 }
 
 .film-item h3 {
-    font-size: 18px;
+    font-size: clamp(14px, 4vw, 18px);
     color: #333;
     margin: 10px 0;
 }
@@ -243,47 +243,63 @@ footer {
     color: #ff5733;
 }
 
+@media (max-width: 1200px) {
+    .film-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
 @media (max-width: 768px) {
-    main {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    form {
-        padding: 20px;
-    }
-
-    .footer-logo img {
-        max-width: 100px;
-    }
-
-    .footer-address h3 {
-        font-size: 16px;
-    }
-
-    .footer-address p {
-        font-size: 12px;
+    .film-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 15px; /* Reduce gap */
     }
 }
 
 @media (max-width: 480px) {
-    main {
-        padding: 10px;
+    .film-container {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+        gap: 10px; /* Reduce gap */
     }
 
-    .footer-logo img {
-        max-width: 80px;
-    }
-
-    .footer-address h3 {
-        font-size: 14px;
-    }
-
-    .footer-address p {
-        font-size: 10px;
+    .film-item {
+        padding: 10px; /* Compact padding */
     }
 }
-a{
-    text-decoration: none;
-    text-align: center;
+
+/* Adjustments for hover effects on touch devices */
+@media (hover: none) {
+    .film-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .film-item:hover img {
+        opacity: 1;
+    }
+}
+
+/* Footer responsive tweaks */
+footer {
+    padding: 20px 10px; /* Compact footer on smaller screens */
+    font-size: clamp(12px, 2vw, 14px); /* Scales font size */
+}
+
+.footer-logo img {
+    max-width: 100px; /* Smaller logo for mobile devices */
+}
+
+.footer-address h3 {
+    font-size: clamp(16px, 4vw, 18px); /* Scales between 16px and 18px */
+}
+
+.footer-address p {
+    font-size: clamp(12px, 3vw, 14px); /* Scales between 12px and 14px */
+}
+
+/* Reduce animation for low-performance devices */
+@media (prefers-reduced-motion: reduce) {
+    .film-item {
+        animation: none;
+    }
 }

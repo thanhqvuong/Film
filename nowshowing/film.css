@@ -233,18 +233,54 @@ footer {
     color: #ff5733;
 }
 
-@media (max-width: 768px) {
-    main {
-        max-width: 90%;
-        padding: 15px;
+/* Base styles remain unchanged */
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .movie-detail {
+        flex-direction: column; /* Stack poster and info vertically */
+        align-items: center; /* Center align for smaller screens */
     }
 
-    form {
-        padding: 20px;
+    .movie-poster {
+        margin-right: 0; /* Remove margin-right */
+        margin-bottom: 20px; /* Add spacing below poster */
+    }
+
+    .movie-info {
+        width: 100%;
+        max-width: 90%; /* Shrink to fit screen */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .movie-poster img {
+        width: 180px; /* Adjust poster size for tablets */
+    }
+
+    .movie-info h1 {
+        font-size: 1.8rem; /* Adjust title size */
+    }
+
+    .movie-info p {
+        font-size: 0.9rem; /* Adjust paragraph size */
+    }
+
+    .movie-trailer iframe {
+        height: 350px; /* Adjust iframe height */
+    }
+
+    .buttons .btn-booking {
+        font-size: 1.4rem; /* Reduce button font size */
+        padding: 15px 40px; /* Adjust padding */
+        width: 200px; /* Adjust width */
+    }
+
+    footer {
+        padding: 30px 15px; /* Adjust padding */
     }
 
     .footer-logo img {
-        max-width: 100px;
+        max-width: 100px; /* Adjust logo size */
     }
 
     .footer-address h3 {
@@ -256,13 +292,48 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 20px; /* Reduce padding */
     }
 
-    .footer-logo img {
-        max-width: 80px;
+    .movie-trailer iframe {
+        height: 250px; /* Adjust iframe height for mobile */
+    }
+
+    .buttons .btn-booking {
+        font-size: 1.2rem; /* Further reduce button font size */
+        padding: 10px 30px; /* Adjust padding */
+        width: 180px; /* Adjust width */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-info {
+        font-size: 0.8rem; /* Reduce font size */
+        padding: 10px; /* Minimize padding */
+    }
+
+    .movie-info h1 {
+        font-size: 1.5rem; /* Smaller title size */
+    }
+
+    .movie-poster img {
+        width: 150px; /* Further reduce poster size */
+    }
+
+    .movie-trailer iframe {
+        height: 200px; /* Smaller iframe */
+    }
+
+    .buttons .btn-booking {
+        font-size: 1rem;
+        padding: 10px 20px; /* Adjust padding */
+        width: 150px; /* Minimize width */
+    }
+
+    footer {
+        padding: 20px 10px;
     }
 
     .footer-address h3 {
@@ -272,8 +343,4 @@ footer {
     .footer-address p {
         font-size: 10px;
     }
-}
-a{
-    text-decoration: none;
-    text-align: center;
 }

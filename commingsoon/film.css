@@ -233,47 +233,110 @@ footer {
     color: #ff5733;
 }
 
+@media (max-width: 1024px) {
+    /* Adjust layout for tablets */
+    .movie-detail {
+        flex-direction: column; /* Stack poster and info vertically */
+        align-items: center; /* Center-align for better visual balance */
+    }
+
+    .movie-poster {
+        margin-right: 0; /* Remove unnecessary right margin */
+        margin-bottom: 20px; /* Add spacing between poster and info */
+    }
+
+    .movie-info {
+        max-width: 90%; /* Limit info width for smaller screens */
+    }
+
+    .movie-info h1 {
+        font-size: 1.8rem; /* Slightly reduce title size */
+    }
+
+    .movie-info p {
+        font-size: 0.95rem; /* Adjust paragraph font size */
+    }
+
+    .movie-trailer iframe {
+        height: 350px; /* Adjust iframe height for smaller screens */
+    }
+
+    .buttons .btn-booking {
+        width: 200px; /* Reduce button width */
+        font-size: 1.4rem; /* Slightly reduce font size */
+        padding: 15px 40px; /* Adjust padding */
+    }
+}
+
 @media (max-width: 768px) {
+    /* Adjust layout for mobile devices */
     main {
-        max-width: 90%;
-        padding: 15px;
+        padding: 20px; /* Reduce padding */
+        gap: 15px; /* Reduce gap */
     }
 
-    form {
-        padding: 20px;
+    .movie-detail {
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center;
     }
 
-    .footer-logo img {
-        max-width: 100px;
+    .movie-poster img {
+        width: 180px; /* Scale down poster size */
     }
 
-    .footer-address h3 {
-        font-size: 16px;
+    .movie-info h1 {
+        font-size: 1.6rem; /* Reduce title font size */
     }
 
-    .footer-address p {
-        font-size: 12px;
+    .movie-info p {
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    .movie-trailer iframe {
+        height: 300px; /* Reduce iframe height further */
+    }
+
+    .buttons .btn-booking {
+        width: 180px; /* Further reduce button width */
+        font-size: 1.2rem; /* Adjust font size */
+        padding: 10px 30px; /* Adjust padding */
     }
 }
 
 @media (max-width: 480px) {
-    main {
-        padding: 10px;
+    /* Fine-tune for smaller mobile devices */
+    .movie-info h1 {
+        font-size: 1.4rem; /* Further reduce title size */
     }
 
-    .footer-logo img {
-        max-width: 80px;
+    .movie-info p {
+        font-size: 0.85rem; /* Adjust text for readability */
     }
 
-    .footer-address h3 {
-        font-size: 14px;
+    .movie-trailer iframe {
+        height: 250px; /* Further reduce trailer height */
     }
 
-    .footer-address p {
-        font-size: 10px;
+    .buttons .btn-booking {
+        width: 150px; /* Compact button size */
+        font-size: 1rem; /* Smaller font size for buttons */
+        padding: 10px 20px; /* Reduce padding */
     }
 }
-a{
-    text-decoration: none;
-    text-align: center;
+
+@media (max-width: 360px) {
+    /* Special adjustments for very small screens */
+    .movie-info h1 {
+        font-size: 1.2rem; /* Smaller title */
+    }
+
+    .movie-info p {
+        font-size: 0.8rem; /* Adjust text size */
+    }
+
+    .buttons .btn-booking {
+        width: 140px;
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
 }

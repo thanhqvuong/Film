@@ -164,21 +164,59 @@ footer img {
 
 /* Responsive */
 @media (max-width: 768px) {
-    #login {
+    /* Adjust header container for smaller screens */
+    header .container {
+        flex-direction: column;
         padding: 15px;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-bar ol {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-bar ol li ul,
+    .nav-bar ol span ul {
+        position: static;
+        box-shadow: none;
     }
 }
 
 @media (max-width: 480px) {
-    header img {
-        max-height: 40px;
-    }
-
-    header nav a {
-        font-size: 12px;
-    }
-
+    /* Login form adjustments */
     #login {
-        padding: 10px;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    #login h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    button[type="submit"] {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    footer img {
+        max-width: 80px;
     }
 }

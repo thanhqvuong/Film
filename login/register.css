@@ -215,18 +215,24 @@ footer {
     color: #ff5733;
 }
 
-@media (max-width: 768px) {
-    main {
-        max-width: 90%;
+@media (max-width: 1024px) {
+    /* Adjust navigation bar for tablets */
+    .nav-bar {
+        gap: 15px;
+    }
+
+    .nav-bar ol {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header .container {
         padding: 15px;
     }
 
-    form {
-        padding: 20px;
-    }
-
-    .footer-logo img {
-        max-width: 100px;
+    footer {
+        padding: 30px 15px;
     }
 
     .footer-address h3 {
@@ -238,13 +244,58 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    /* Navigation bar adjustments */
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-bar ol {
+        flex-direction: column;
+    }
+
+    /* Form container */
+    main > #register {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    main h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    button[type="submit"] {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 480px) {
-    main {
-        padding: 10px;
+    /* For small devices */
+    header .container {
+        flex-direction: column;
     }
 
     .footer-logo img {
         max-width: 80px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer p {
+        font-size: 12px;
     }
 
     .footer-address h3 {
@@ -254,8 +305,4 @@ footer {
     .footer-address p {
         font-size: 10px;
     }
-}
-a{
-    text-decoration: none;
-    text-align: center;
 }
